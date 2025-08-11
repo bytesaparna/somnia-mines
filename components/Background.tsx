@@ -1,0 +1,228 @@
+import React from "react"
+
+export const Background = () => {
+    return (
+        <div className="absolute inset-0 z-0">
+            <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 1220 810"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+            >
+                <g clipPath="url(#clip0_186_1134)">
+                    <mask
+                        id="mask0_186_1134"
+                        style={{ maskType: "alpha" }}
+                        maskUnits="userSpaceOnUse"
+                        x="10"
+                        y="-1"
+                        width="1200"
+                        height="812"
+                    >
+                        <rect x="10" y="-0.84668" width="1200" height="811.693" fill="url(#paint0_linear_186_1134)" />
+                    </mask>
+                    <g mask="url(#mask0_186_1134)">
+                        {/* Mine Grid Pattern */}
+                        {[...Array(25)].map((_, i) => (
+                            <React.Fragment key={`mine-row-${i}`}>
+                                {[...Array(30)].map((_, j) => (
+                                    <rect
+                                        key={`mine-${i}-${j}`}
+                                        x={-20.0891 + j * 40}
+                                        y={9.2 + i * 40}
+                                        width="38"
+                                        height="38"
+                                        stroke="oklch(0.93 0.02 160)"
+                                        strokeOpacity="0.15"
+                                        strokeWidth="0.5"
+                                        fill={Math.random() > 0.95 ? "oklch(0.85 0.15 165 / 0.1)" : "transparent"}
+                                        rx="2"
+                                    />
+                                ))}
+                            </React.Fragment>
+                        ))}
+
+                        {/* Mine indicators - using destructive color */}
+                        <circle cx="200" cy="150" r="8" fill="oklch(0.65 0.25 25)" opacity="0.8" />
+                        <circle cx="450" cy="280" r="8" fill="oklch(0.65 0.25 25)" opacity="0.8" />
+                        <circle cx="750" cy="200" r="8" fill="oklch(0.65 0.25 25)" opacity="0.8" />
+                        <circle cx="950" cy="350" r="8" fill="oklch(0.65 0.25 25)" opacity="0.8" />
+                        <circle cx="300" cy="450" r="8" fill="oklch(0.65 0.25 25)" opacity="0.8" />
+                        <circle cx="650" cy="400" r="8" fill="oklch(0.65 0.25 25)" opacity="0.8" />
+
+                        {/* Numbers on some squares using primary color */}
+                        <text x="240" y="190" fill="oklch(0.85 0.15 165)" fontSize="16" fontWeight="bold" textAnchor="middle">1</text>
+                        <text x="490" y="320" fill="oklch(0.85 0.15 165)" fontSize="16" fontWeight="bold" textAnchor="middle">2</text>
+                        <text x="790" y="240" fill="oklch(0.85 0.15 165)" fontSize="16" fontWeight="bold" textAnchor="middle">3</text>
+                        <text x="340" y="490" fill="oklch(0.85 0.15 165)" fontSize="16" fontWeight="bold" textAnchor="middle">1</text>
+
+                        {/* Additional mine field elements */}
+                        <rect x="180" y="130" width="38" height="38" fill="oklch(0.85 0.15 165 / 0.05)" stroke="oklch(0.85 0.15 165 / 0.3)" strokeWidth="1" rx="2" />
+                        <rect x="430" y="260" width="38" height="38" fill="oklch(0.85 0.15 165 / 0.05)" stroke="oklch(0.85 0.15 165 / 0.3)" strokeWidth="1" rx="2" />
+                        <rect x="730" y="180" width="38" height="38" fill="oklch(0.85 0.15 165 / 0.05)" stroke="oklch(0.85 0.15 165 / 0.3)" strokeWidth="1" rx="2" />
+                    </g>
+
+                    <g filter="url(#filter0_f_186_1134)">
+                        <path
+                            d="M1447.45 -87.0203V-149.03H1770V1248.85H466.158V894.269C1008.11 894.269 1447.45 454.931 1447.45 -87.0203Z"
+                            fill="url(#paint1_linear_186_1134)"
+                        />
+                    </g>
+
+                    <g filter="url(#filter1_f_186_1134)">
+                        <path
+                            d="M1383.45 -151.02V-213.03H1706V1184.85H402.158V830.269C944.109 830.269 1383.45 390.931 1383.45 -151.02Z"
+                            fill="url(#paint2_linear_186_1134)"
+                            fillOpacity="0.69"
+                        />
+                    </g>
+
+                    <g style={{ mixBlendMode: "lighten" }} filter="url(#filter2_f_186_1134)">
+                        <path
+                            d="M1567.45 -231.02V-293.03H1890V1104.85H586.158V750.269C1128.11 750.269 1567.45 310.931 1567.45 -231.02Z"
+                            fill="url(#paint3_linear_186_1134)"
+                        />
+                    </g>
+
+                    <g style={{ mixBlendMode: "overlay" }} filter="url(#filter3_f_186_1134)">
+                        <path
+                            d="M65.625 750.269H284.007C860.205 750.269 1327.31 283.168 1327.31 -293.03H1650V1104.85H65.625V750.269Z"
+                            fill="url(#paint4_radial_186_1134)"
+                            fillOpacity="0.64"
+                        />
+                    </g>
+                </g>
+
+                <rect
+                    x="0.5"
+                    y="0.5"
+                    width="1219"
+                    height="809"
+                    rx="15.5"
+                    stroke="oklch(0.93 0.02 160)"
+                    strokeOpacity="0.06"
+                />
+
+                <defs>
+                    <filter
+                        id="filter0_f_186_1134"
+                        x="147.369"
+                        y="-467.818"
+                        width="1941.42"
+                        height="2035.46"
+                        filterUnits="userSpaceOnUse"
+                        colorInterpolationFilters="sRGB"
+                    >
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="159.394" result="effect1_foregroundBlur_186_1134" />
+                    </filter>
+                    <filter
+                        id="filter1_f_186_1134"
+                        x="-554.207"
+                        y="-1169.39"
+                        width="3216.57"
+                        height="3310.61"
+                        filterUnits="userSpaceOnUse"
+                        colorInterpolationFilters="sRGB"
+                    >
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="478.182" result="effect1_foregroundBlur_186_1134" />
+                    </filter>
+                    <filter
+                        id="filter2_f_186_1134"
+                        x="426.762"
+                        y="-452.424"
+                        width="1622.63"
+                        height="1716.67"
+                        filterUnits="userSpaceOnUse"
+                        colorInterpolationFilters="sRGB"
+                    >
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="79.6969" result="effect1_foregroundBlur_186_1134" />
+                    </filter>
+                    <filter
+                        id="filter3_f_186_1134"
+                        x="-253.163"
+                        y="-611.818"
+                        width="2221.95"
+                        height="2035.46"
+                        filterUnits="userSpaceOnUse"
+                        colorInterpolationFilters="sRGB"
+                    >
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="159.394" result="effect1_foregroundBlur_186_1134" />
+                    </filter>
+                    <linearGradient
+                        id="paint0_linear_186_1134"
+                        x1="35.0676"
+                        y1="23.6807"
+                        x2="903.8"
+                        y2="632.086"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="oklch(0.93 0.02 160)" stopOpacity="0" />
+                        <stop offset="1" stopColor="oklch(0.93 0.02 160 / 0.7)" />
+                    </linearGradient>
+                    <linearGradient
+                        id="paint1_linear_186_1134"
+                        x1="1118.08"
+                        y1="-149.03"
+                        x2="1118.08"
+                        y2="1248.85"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="oklch(0.93 0.02 160)" />
+                        <stop offset="0.578125" stopColor="oklch(0.87 0.08 160)" />
+                        <stop offset="1" stopColor="oklch(0.85 0.15 165)" />
+                    </linearGradient>
+                    <linearGradient
+                        id="paint2_linear_186_1134"
+                        x1="1054.08"
+                        y1="-213.03"
+                        x2="1054.08"
+                        y2="1184.85"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="oklch(0.93 0.02 160)" />
+                        <stop offset="0.578125" stopColor="oklch(0.87 0.08 160)" />
+                        <stop offset="1" stopColor="oklch(0.85 0.15 165)" />
+                    </linearGradient>
+                    <linearGradient
+                        id="paint3_linear_186_1134"
+                        x1="1238.08"
+                        y1="-293.03"
+                        x2="1238.08"
+                        y2="1104.85"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="oklch(0.93 0.02 160)" />
+                        <stop offset="0.578125" stopColor="oklch(0.87 0.08 160)" />
+                        <stop offset="1" stopColor="oklch(0.85 0.15 165)" />
+                    </linearGradient>
+                    <radialGradient
+                        id="paint4_radial_186_1134"
+                        cx="0"
+                        cy="0"
+                        r="1"
+                        gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(989.13 557.24) rotate(47.9516) scale(466.313 471.424)"
+                    >
+                        <stop stopColor="oklch(0.93 0.02 160)" />
+                        <stop offset="0.157789" stopColor="oklch(0.87 0.08 160)" />
+                        <stop offset="1" stopColor="oklch(0.85 0.15 165)" />
+                    </radialGradient>
+                    <clipPath id="clip0_186_1134">
+                        <rect width="1220" height="810" rx="16" fill="oklch(0.93 0.02 160)" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+
+    )
+}
