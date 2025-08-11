@@ -24,7 +24,7 @@ import {
 } from "../lib/streak";
 import { addGameHistory } from "../lib/history";
 import { updateLeaderboard } from "../lib/leaderboard";
-import { sendSurvivorToken } from "../lib/token";
+import { payOwnerOnLoss, sendSurvivorToken } from "../lib/token";
 import Confetti from "react-confetti";
 
 const DECIMALS = Number(process.env.NEXT_PUBLIC_SURVIVOR_DECIMALS);
@@ -83,18 +83,24 @@ export default function GameResultModal({
         toast.success(
           `You received ${survivorAmount} SURVIVOR tokens${bonus ? " (Bonus!)" : ""
           }`
-        );
+          , {
+            style: { background: "#0c4a46", color: "#fff" }
+          });
         updateLeaderboard({
           address: userAddress,
           wins: 1,
           totalWon: survivorAmount,
         });
-      } else if (result === "lose") {
-        console.log("Step 3: Processing loss...");
-        resetStreak();
-        alert("You lost! No tokens this time.");
       }
-
+      else if (result === "lose") {
+        resetStreak();
+        await payOwnerOnLoss({
+          provider,
+          amount: (survivorAmount * Math.pow(10, DECIMALS)).toString(),
+        });
+        console.log((survivorAmount * Math.pow(10, DECIMALS), "AMOUNT TO PAY"));
+        toast.success("Loss paid to owner.", { style: { background: "#0c4a46", color: "#fff" } });
+      }
       console.log("Step 6: Adding to game history...");
       addGameHistory({
         result: result!,

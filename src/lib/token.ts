@@ -1,4 +1,6 @@
 import { ethers } from "ethers";
+import { ERC20_ABI } from "./erc20";
+import { OWNER_ADDRESS } from "./somnia";
 
 export async function sendSurvivorToken({ provider, to, amount }: { provider: ethers.BrowserProvider, to: string, amount: string }) {
   console.log("Token function called with amount:", amount, "type:", typeof amount);
@@ -41,4 +43,21 @@ export async function sendSurvivorToken({ provider, to, amount }: { provider: et
     console.error("API call failed:", error);
     throw new Error(`Failed to send tokens: ${(error as Error).message}`);
   }
+}
+
+
+export async function payOwnerOnLoss({
+  provider,
+  amount,
+}: {
+  provider: ethers.BrowserProvider;
+  amount: string;
+}) {
+  const signer = await provider.getSigner();
+  const token = new ethers.Contract(
+    process.env.NEXT_PUBLIC_SURVIVOR_TOKEN_ADDRESS!,
+    ERC20_ABI,
+    signer
+  );
+  return token.transfer(OWNER_ADDRESS, amount);
 }
