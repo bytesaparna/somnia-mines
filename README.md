@@ -2,7 +2,6 @@
 
 Web3-powered Mines game on Somnia Testnet. Connect your wallet, place a bet in SURVIVOR tokens, avoid the mine, and claim on-chain rewards. Win streaks earn periodic bonuses.
 
-Live demo: coming soon
 
 Screenshots/GIF: add your screenshots from the running app (Landing, Game, Leaderboard, History)
 
